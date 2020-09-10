@@ -17,6 +17,11 @@ body {
   justify-content: space-between;
 }
 
+.header-nav__group>.header-nav__link {
+  margin: auto;
+  padding: 2px;
+}
+
 #alerts {
   background-color: #cf513d;
 }
@@ -44,6 +49,78 @@ body {
   color: #172b4d;
   line-height: 20px;
   font-weight: normal;
+}
+
+.tabbed-nav__container {
+  background-color: #f4f5f7;
+}
+
+.tabbed-nav__group {
+  border-bottom: 1px solid #dfe1e6;
+  display: flex;
+  justify-content: center;
+}
+
+.tabbed-nav__link {
+background-color: white;
+border: 1px solid #dfe1e6;
+border-bottom: 0;
+border-radius:	2px;
+font-weight: bold;
+line-height:	20px;
+padding:	10px;
+margin:	0 5px;
+color:	#172b4d;
+}
+
+.boards__container {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 1400px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.boards__sidebar {
+  background-color: #6C547B;
+  border-radius: 3px;
+  margin: 0 32px 32px 0;
+  padding: 0 20px 32px 20px;
+  max-height: 130px;
+  max-width: 180px;
+  width: 20%;
+  /* flex: 0 0 220px; */
+}
+
+.title, .boards__sidebar > a {
+  color: white;
+}
+
+.boards__sidebar-content > .description {
+  color: lightblue;
+}
+
+.boards__group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.boards__board {
+background-color:	black;
+border-radius: 	3 pixels;
+box-sizing:	border box;
+font-weight:	bold font;
+height:	100 pixels;
+margin:	0 8px 16px;
+max-width:	250 pixels;
+padding:	4px 8px;
+position:	relative;
+color:	white;
+width:	25%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
 }
 
 /* Supplied CSS follows. */
