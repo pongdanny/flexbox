@@ -17,13 +17,20 @@ body {
   justify-content: space-between;
 }
 
-.header-nav__group>.header-nav__link {
+.header-nav__group > .header-nav__link {
   margin: auto;
   padding: 2px;
 }
 
 #alerts {
   background-color: #cf513d;
+}
+
+@media screen and (max-width: 730px) {
+  #search,
+  .boards-label {
+    display: none;
+  }
 }
 
 .team__container {
@@ -60,17 +67,32 @@ body {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 500px) {
+  .tabbed-nav__group {
+    display: block;
+  }
+  .tabbed-nav__link {
+    display: block;
+  }
+}
 
+@media screen and (min-width: 500px) {
+  .tabbed-nav__group,
+  .tabbed-nav__link {
+    align-content: center;
+    text-align: center;
+  }
+}
 .tabbed-nav__link {
-background-color: white;
-border: 1px solid #dfe1e6;
-border-bottom: 0;
-border-radius:	2px;
-font-weight: bold;
-line-height:	20px;
-padding:	10px;
-margin:	0 5px;
-color:	#172b4d;
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  border-bottom: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px;
+  margin: 0 5px;
+  color: #172b4d;
 }
 
 .boards__container {
@@ -82,17 +104,22 @@ color:	#172b4d;
 }
 
 .boards__sidebar {
-  background-color: #6C547B;
+  background-color: #6c547b;
   border-radius: 3px;
   margin: 0 32px 32px 0;
   padding: 0 20px 32px 20px;
   max-height: 130px;
   max-width: 180px;
   width: 20%;
-  /* flex: 0 0 220px; */
+  flex: 0 0 220px;
 }
 
-.title, .boards__sidebar > a {
+.board-1 {
+  background-image: url("/board-backgrounds/board-1-background.jpg");
+  background-size: cover;
+}
+.title,
+.boards__sidebar > a {
   color: white;
 }
 
@@ -107,20 +134,36 @@ color:	#172b4d;
 }
 
 .boards__board {
-background-color:	black;
-border-radius: 	3 pixels;
-box-sizing:	border box;
-font-weight:	bold font;
-height:	100 pixels;
-margin:	0 8px 16px;
-max-width:	250 pixels;
-padding:	4px 8px;
-position:	relative;
-color:	white;
-width:	25%;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+  background-color: black;
+  border-radius: 3 pixels;
+  box-sizing: border box;
+  font-weight: bold font;
+  /* height: 100 pixels; */
+  margin: 0 8px 16px;
+  max-width: 250 pixels;
+  padding: 4px 8px;
+  position: relative;
+  color: white;
+  width: 25%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1280px) {
+  .boards__board {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .boards__group {
+    width: 100%;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Supplied CSS follows. */
